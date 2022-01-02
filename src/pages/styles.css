@@ -1,7 +1,10 @@
 :root {
     --grid-color: #d8f5ff;
-    --animation-time: 2s;
+    --animation-time: 5s;
     --line-weight: 1px;
+    --v-start-amount: -100vh;
+    --h-start-amount: -100vw;
+    --v-step: 2.5;
 }
 
 body, html {
@@ -31,11 +34,35 @@ h1 {
     position: absolute;
 }
 
+@keyframes h11fade {
+   0% {
+       opacity: 0;
+   } 
+   80% {
+       opacity: 0;
+   }
+   100% {
+       opacity: 100;
+   }
+}
+@keyframes h12fade {
+    0% {
+        opacity: 0;
+    } 
+    90% {
+        opacity: 0;
+    }
+    110% {
+        opacity: 100;
+    }
+ }
+
 .h11 {
     font-size: 4vw;
-    padding-top: 20%;
+    padding-top: 17.5vh;
     padding-left: 20%;
     max-width: 35%;
+    animation: h11fade 3s 1;
 }
 
 .h12 {
@@ -43,6 +70,7 @@ h1 {
     max-width: 40vw;
     padding-left: 20%;
     padding-top: 72.5vh;
+    animation: h12fade 3s 1;
 }
 
 .contact {
@@ -56,16 +84,57 @@ h1 {
     justify-content: center;
 }
 
+.contact-fill {
+    height: 10vh;
+    width: 100vw;
+    position: absolute;
+    top: 90vh;
+    background-color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* @keyframes iconswell {
+    from {
+        width: 30px;
+        height: 30px;
+    }
+    to {
+        width: 34px;
+        height: 34px;
+    }
+} */
+
 .icon {
     margin: 10px;
+    animation: iconswell .25s 1 reverse;
+}
+
+.icon:hover {
+    /* animation: iconswell .25s 1;
+    width: 34px;
+    height: 34px; */
+}
+
+.twit:hover {
+    filter: invert(69%) sepia(54%) saturate(5689%) hue-rotate(175deg) brightness(96%) contrast(98%);
+}
+
+.github:hover {
+    filter: invert(36%) sepia(55%) saturate(2859%) hue-rotate(239deg) brightness(94%) contrast(97%);
+}
+
+.youtube:hover {
+    filter: invert(15%) sepia(83%) saturate(7385%) hue-rotate(5deg) brightness(94%) contrast(121%);
 }
 
 @keyframes vlineslide1 {
     0% {
         top: -100vh;
     }
-    50% {
-        top: -100vh;
+    10% {
+        top: calc(var(--v-start-amount) - 2.5vh);
     }
     100% {
         top: 0;
@@ -75,8 +144,8 @@ h1 {
     0% {
         top: -100vh;
     }
-    52.5% {
-        top: -100vh;
+    10% {
+        top: calc(var(--v-start-amount) - 5vh);
     }
     100% {
         top: 0;
@@ -86,8 +155,8 @@ h1 {
     0% {
         top: -100vh;
     }
-    55% {
-        top: -100vh;
+    10% {
+        top: calc(var(--v-start-amount) - 7.5vh);
     }
     100% {
         top: 0;
@@ -97,8 +166,8 @@ h1 {
     0% {
         top: -100vh;
     }
-    57.5% {
-        top: -100vh;
+    10% {
+        top: calc(var(--v-start-amount) - 10vh);
     }
     100% {
         top: 0;
@@ -108,8 +177,8 @@ h1 {
     0% {
         top: -100vh;
     }
-    60% {
-        top: -100vh;
+    10% {
+        top: calc(var(--v-start-amount) - 12.5vh);
     }
     100% {
         top: 0;
@@ -119,8 +188,8 @@ h1 {
     0% {
         top: -100vh;
     }
-    62.5% {
-        top: -100vh;
+    10% {
+        top: calc(var(--v-start-amount) - 15vh);
     }
     100% {
         top: 0;
@@ -130,8 +199,8 @@ h1 {
     0% {
         top: -100vh;
     }
-    65% {
-        top: -100vh;
+    10% {
+        top: calc(var(--v-start-amount) - 17.5vh);
     }
     100% {
         top: 0;
@@ -141,8 +210,8 @@ h1 {
     0% {
         top: -100vh;
     }
-    67.5% {
-        top: -100vh;
+    10% {
+        top: calc(var(--v-start-amount) - 20vh);
     }
     100% {
         top: 0;
@@ -152,8 +221,8 @@ h1 {
     0% {
         top: -100vh;
     }
-    70% {
-        top: -100vh;
+    10% {
+        top: calc(var(--v-start-amount) - 22.5vh);
     }
     100% {
         top: 0;
@@ -163,8 +232,8 @@ h1 {
     0% {
         top: -100vh;
     }
-    72.5% {
-        top: -100vh;
+    10% {
+        top: calc(var(--v-start-amount) - 25vh);
     }
     100% {
         top: 0;
@@ -174,8 +243,8 @@ h1 {
     0% {
         top: -100vh;
     }
-    75% {
-        top: -100vh;
+    10% {
+        top: calc(var(--v-start-amount) - 27.5vh);
     }
     100% {
         top: 0;
@@ -185,8 +254,8 @@ h1 {
     0% {
         top: -100vh;
     }
-    77.5% {
-        top: -100vh;
+    10% {
+        top: calc(var(--v-start-amount) - 30vh);
     }
     100% {
         top: 0;
@@ -196,8 +265,8 @@ h1 {
     0% {
         top: -100vh;
     }
-    80% {
-        top: -100vh;
+    10% {
+        top: calc(var(--v-start-amount) - 32.5vh);
     }
     100% {
         top: 0;
@@ -207,8 +276,8 @@ h1 {
     0% {
         top: -100vh;
     }
-    82.5% {
-        top: -100vh;
+    10% {
+        top: calc(var(--v-start-amount) - 35vh);
     }
     100% {
         top: 0;
@@ -218,8 +287,8 @@ h1 {
     0% {
         top: -100vh;
     }
-    85% {
-        top: -100vh;
+    10% {
+        top: calc(var(--v-start-amount) - 37.5vh);
     }
     100% {
         top: 0;
@@ -229,8 +298,8 @@ h1 {
     0% {
         top: -100vh;
     }
-    87.5% {
-        top: -100vh;
+    10% {
+        top: calc(var(--v-start-amount) - 40vh);
     }
     100% {
         top: 0;
@@ -240,8 +309,8 @@ h1 {
     0% {
         top: -100vh;
     }
-    90% {
-        top: -100vh;
+    10% {
+        top: calc(var(--v-start-amount) - 42.5vh);
     }
     100% {
         top: 0;
@@ -251,8 +320,8 @@ h1 {
     0% {
         top: -100vh;
     }
-    92.5% {
-        top: -100vh;
+    10% {
+        top: calc(var(--v-start-amount) - 45vh);
     }
     100% {
         top: 0;
@@ -262,8 +331,8 @@ h1 {
     0% {
         top: -100vh;
     }
-    95% {
-        top: -100vh;
+    10% {
+        top: calc(var(--v-start-amount) - 47.5vh);
     }
     100% {
         top: 0;
@@ -377,8 +446,8 @@ h1 {
     0% {
         left: -100vw;
     }
-    50% {
-        left: -100vw;
+    10% {
+        left: calc(var(--h-start-amount) - 2.5vw);
     }
     100% {
         left: 0;
@@ -388,8 +457,8 @@ h1 {
     0% {
         left: -100vw;
     }
-    52.5% {
-        left: -100vw;
+    10% {
+        left: calc(var(--h-start-amount) - 5vw);
     }
     100% {
         left: 0;
@@ -399,8 +468,8 @@ h1 {
     0% {
         left: -100vw;
     }
-    55% {
-        left: -100vw;
+    10% {
+        left: calc(var(--h-start-amount) - 7.5vw);
     }
     100% {
         left: 0;
@@ -410,8 +479,8 @@ h1 {
     0% {
         left: -100vw;
     }
-    57.5% {
-        left: -100vw;
+    10% {
+        left: calc(var(--h-start-amount) - 10vw);
     }
     100% {
         left: 0;
@@ -421,8 +490,8 @@ h1 {
     0% {
         left: -100vw;
     }
-    60% {
-        left: -100vw;
+    10% {
+        left: calc(var(--h-start-amount) - 12.5vw);
     }
     100% {
         left: 0;
@@ -432,8 +501,8 @@ h1 {
     0% {
         left: -100vw;
     }
-    62.5% {
-        left: -100vw;
+    10% {
+        left: calc(var(--h-start-amount) - 15vw);
     }
     100% {
         left: 0;
@@ -443,8 +512,8 @@ h1 {
     0% {
         left: -100vw;
     }
-    65% {
-        left: -100vw;
+    10% {
+        left: calc(var(--h-start-amount) - 17.5vw);
     }
     100% {
         left: 0;
@@ -454,8 +523,8 @@ h1 {
     0% {
         left: -100vw;
     }
-    67.5% {
-        left: -100vw;
+    10% {
+        left: calc(var(--h-start-amount) - 17.5vw);
     }
     100% {
         left: 0;
@@ -465,8 +534,8 @@ h1 {
     0% {
         left: -100vw;
     }
-    60% {
-        left: -100vw;
+    10% {
+        left: calc(var(--h-start-amount) - 20vw);
     }
     100% {
         left: 0;
@@ -476,8 +545,8 @@ h1 {
     0% {
         left: -100vw;
     }
-    62.5% {
-        left: -100vw;
+    10% {
+        left: calc(var(--h-start-amount) - 22.5vw);
     }
     100% {
         left: 0;
@@ -487,8 +556,8 @@ h1 {
     0% {
         left: -100vw;
     }
-    65% {
-        left: -100vw;
+    10% {
+        left: calc(var(--h-start-amount) - 25vw);
     }
     100% {
         left: 0;
@@ -498,8 +567,8 @@ h1 {
     0% {
         left: -100vw;
     }
-    67.5% {
-        left: -100vw;
+    10% {
+        left: calc(var(--h-start-amount) - 27.5vw);
     }
     100% {
         left: 0;
@@ -509,8 +578,8 @@ h1 {
     0% {
         left: -100vw;
     }
-    70% {
-        left: -100vw;
+    10% {
+        left: calc(var(--h-start-amount) - 30vw);
     }
     100% {
         left: 0;
@@ -520,8 +589,8 @@ h1 {
     0% {
         left: -100vw;
     }
-    72.5% {
-        left: -100vw;
+    10% {
+        left: calc(var(--h-start-amount) - 32.5vw);
     }
     100% {
         left: 0;
@@ -531,8 +600,8 @@ h1 {
     0% {
         left: -100vw;
     }
-    75% {
-        left: -100vw;
+    10% {
+        left: calc(var(--h-start-amount) - 35vw);
     }
     100% {
         left: 0;
@@ -542,8 +611,8 @@ h1 {
     0% {
         left: -100vw;
     }
-    77.5% {
-        left: -100vw;
+    10% {
+        left: calc(var(--h-start-amount) - 37.5vw);
     }
     100% {
         left: 0;
@@ -553,8 +622,8 @@ h1 {
     0% {
         left: -100vw;
     }
-    80% {
-        left: -100vw;
+    10% {
+        left: calc(var(--h-start-amount) - 40vw);
     }
     100% {
         left: 0;
@@ -564,8 +633,8 @@ h1 {
     0% {
         left: -100vw;
     }
-    82.5% {
-        left: -100vw;
+    10% {
+        left: calc(var(--h-start-amount) - 42.5vw);
     }
     100% {
         left: 0;
@@ -575,8 +644,8 @@ h1 {
     0% {
         left: -100vw;
     }
-    85% {
-        left: -100vw;
+    10% {
+        left: calc(var(--h-start-amount) - 45vw);
     }
     100% {
         left: 0;
@@ -586,8 +655,8 @@ h1 {
     0% {
         left: -100vw;
     }
-    87.5% {
-        left: -100vw;
+    10% {
+        left: calc(var(--h-start-amount) - 47.5vw);
     }
     100% {
         left: 0;
@@ -597,8 +666,8 @@ h1 {
     0% {
         left: -100vw;
     }
-    90% {
-        left: -100vw;
+    10% {
+        left: calc(var(--h-start-amount) - 50vw);
     }
     100% {
         left: 0;
@@ -608,14 +677,211 @@ h1 {
     0% {
         left: -100vw;
     }
-    92.5% {
-        left: -100vw;
+    10% {
+        left: calc(var(--h-start-amount) - 52.5vw);
     }
     100% {
         left: 0;
     }
 }
-
+@keyframes hlineslide23 {
+    0% {
+        left: -100vw;
+    }
+    10% {
+        left: calc(var(--h-start-amount) - 55vw);
+    }
+    100% {
+        left: 0;
+    }
+}
+@keyframes hlineslide24 {
+    0% {
+        left: -100vw;
+    }
+    10% {
+        left: calc(var(--h-start-amount) - 57.5vw);
+    }
+    100% {
+        left: 0;
+    }
+}
+@keyframes hlineslide25 {
+    0% {
+        left: -100vw;
+    }
+    10% {
+        left: calc(var(--h-start-amount) - 60vw);
+    }
+    100% {
+        left: 0;
+    }
+}
+@keyframes hlineslide26 {
+    0% {
+        left: -100vw;
+    }
+    10% {
+        left: calc(var(--h-start-amount) - 62.5vw);
+    }
+    100% {
+        left: 0;
+    }
+}
+@keyframes hlineslide27 {
+    0% {
+        left: -100vw;
+    }
+    10% {
+        left: calc(var(--h-start-amount) - 65vw);
+    }
+    100% {
+        left: 0;
+    }
+}
+@keyframes hlineslide28 {
+    0% {
+        left: -100vw;
+    }
+    10% {
+        left: calc(var(--h-start-amount) - 67.5vw);
+    }
+    100% {
+        left: 0;
+    }
+}
+@keyframes hlineslide29 {
+    0% {
+        left: -100vw;
+    }
+    10% {
+        left: calc(var(--h-start-amount) - 70vw);
+    }
+    100% {
+        left: 0;
+    }
+}
+@keyframes hlineslide30 {
+    0% {
+        left: -100vw;
+    }
+    10% {
+        left: calc(var(--h-start-amount) - 72.5vw);
+    }
+    100% {
+        left: 0;
+    }
+}
+@keyframes hlineslide31 {
+    0% {
+        left: -100vw;
+    }
+    10% {
+        left: calc(var(--h-start-amount) - 75vw);
+    }
+    100% {
+        left: 0;
+    }
+}
+@keyframes hlineslide32 {
+    0% {
+        left: -100vw;
+    }
+    10% {
+        left: calc(var(--h-start-amount) - 77.5vw);
+    }
+    100% {
+        left: 0;
+    }
+}
+@keyframes hlineslide33 {
+    0% {
+        left: -100vw;
+    }
+    10% {
+        left: calc(var(--h-start-amount) - 80vw);
+    }
+    100% {
+        left: 0;
+    }
+}
+@keyframes hlineslide34 {
+    0% {
+        left: -100vw;
+    }
+    10% {
+        left: calc(var(--h-start-amount) - 82.5vw);
+    }
+    100% {
+        left: 0;
+    }
+}
+@keyframes hlineslide35 {
+    0% {
+        left: -100vw;
+    }
+    10% {
+        left: calc(var(--h-start-amount) - 85vw);
+    }
+    100% {
+        left: 0;
+    }
+}
+@keyframes hlineslide36 {
+    0% {
+        left: -100vw;
+    }
+    10% {
+        left: calc(var(--h-start-amount) - 87.5vw);
+    }
+    100% {
+        left: 0;
+    }
+}
+@keyframes hlineslide37 {
+    0% {
+        left: -100vw;
+    }
+    10% {
+        left: calc(var(--h-start-amount) - 90vw);
+    }
+    100% {
+        left: 0;
+    }
+}
+@keyframes hlineslide38 {
+    0% {
+        left: -100vw;
+    }
+    10% {
+        left: calc(var(--h-start-amount) - 92.5vw);
+    }
+    100% {
+        left: 0;
+    }
+}
+@keyframes hlineslide39 {
+    0% {
+        left: -100vw;
+    }
+    10% {
+        left: calc(var(--h-start-amount) - 95vw);
+    }
+    100% {
+        left: 0;
+    }
+}
+@keyframes hlineslide40 {
+    0% {
+        left: -100vw;
+    }
+    10% {
+        left: calc(var(--h-start-amount) - 97.5vw);
+    }
+    100% {
+        left: 0;
+    }
+}
 
 .hline {
     width: 100vw;
@@ -732,4 +998,94 @@ h1 {
     margin-top: 110vw;
     position: absolute;
     animation: hlineslide22 var(--animation-time) 1;
+}
+.hline23 {
+    margin-top: 115vw;
+    position: absolute;
+    animation: hlineslide23 var(--animation-time) 1;
+}
+.hline24 {
+    margin-top: 120vw;
+    position: absolute;
+    animation: hlineslide24 var(--animation-time) 1;
+}
+.hline25 {
+    margin-top: 120vw;
+    position: absolute;
+    animation: hlineslide25 var(--animation-time) 1;
+}
+.hline26 {
+    margin-top: 125vw;
+    position: absolute;
+    animation: hlineslide26 var(--animation-time) 1;
+}
+.hline27 {
+    margin-top: 130vw;
+    position: absolute;
+    animation: hlineslide27 var(--animation-time) 1;
+}
+.hline28 {
+    margin-top: 135vw;
+    position: absolute;
+    animation: hlineslide28 var(--animation-time) 1;
+}
+.hline29 {
+    margin-top: 140vw;
+    position: absolute;
+    animation: hlineslide29 var(--animation-time) 1;
+}
+.hline30 {
+    margin-top: 145vw;
+    position: absolute;
+    animation: hlineslide30 var(--animation-time) 1;
+}
+.hline31 {
+    margin-top: 150vw;
+    position: absolute;
+    animation: hlineslide31 var(--animation-time) 1;
+}
+.hline32 {
+    margin-top: 155vw;
+    position: absolute;
+    animation: hlineslide32 var(--animation-time) 1;
+}
+.hline33 {
+    margin-top: 160vw;
+    position: absolute;
+    animation: hlineslide33 var(--animation-time) 1;
+}
+.hline34 {
+    margin-top: 165vw;
+    position: absolute;
+    animation: hlineslide34 var(--animation-time) 1;
+}
+.hline35 {
+    margin-top: 170vw;
+    position: absolute;
+    animation: hlineslide35 var(--animation-time) 1;
+}
+.hline36 {
+    margin-top: 175vw;
+    position: absolute;
+    animation: hlineslide36 var(--animation-time) 1;
+}
+.hline37 {
+    margin-top: 180vw;
+    position: absolute;
+    animation: hlineslide37 var(--animation-time) 1;
+}
+.hline38 {
+    margin-top: 185vw;
+    position: absolute;
+    animation: hlineslide38 var(--animation-time) 1;
+}
+.hline39 {
+    margin-top: 190vw;
+    position: absolute;
+    animation: hlineslide39 var(--animation-time) 1;
+}
+.hline40 {
+    margin-top: 195vw;
+    position: absolute;
+    animation: hlineslide40 var(--animation-time) 1;
 }
